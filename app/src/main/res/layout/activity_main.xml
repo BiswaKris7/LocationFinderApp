@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#e1ede2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SectionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location Details"
+            android:textAlignment="center"
+            android:textColor="#A05858"
+            android:textSize="40sp" />
+
+        <!-- ///Address input -->
+        <EditText
+            android:id="@+id/editTextAddress"
+            style="@style/InputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_mylocation"
+            android:hint="Enter Address"
+            android:inputType="text"
+            android:textColor="#090707" />
+        <!-- /////Latitude input -->
+        <EditText
+            android:id="@+id/editTextLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Latitude"
+            android:inputType="numberDecimal"
+            android:drawableLeft="@android:drawable/ic_menu_compass"
+            style="@style/InputField"
+            android:layout_marginTop="8dp" />
+        <!-- /////Longitude input -->
+        <EditText
+            android:id="@+id/editTextLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Longitude"
+            android:inputType="numberDecimal"
+            android:drawableLeft="@android:drawable/ic_menu_compass"
+            style="@style/InputField"
+            android:layout_marginTop="8dp" />
+        <!-- //Query Button -->
+        <Button
+            android:id="@+id/buttonQuery"
+            android:text="Query Location"
+            style="@style/ButtonGreen" />
+        <!-- Result Display -->
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location result will be displayed here"
+            style="@style/ResultText"
+            android:layout_marginTop="12dp" />
+        <!-- Action Buttons -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <!-- Add Button -->
+            <Button
+                android:id="@+id/buttonAdd"
+                style="@style/ButtonGreen"
+                android:layout_width="0dp"
+                android:layout_height="61dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="Add Location" />
+
+            <!-- Update Button -->
+            <Button
+                android:id="@+id/buttonUpdate"
+                android:text="Update Location"
+                style="@style/ButtonBlue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp" />
+
+            <!-- Delete Button -->
+            <Button
+                android:id="@+id/buttonDelete"
+                android:text="Delete Location"
+                style="@style/ButtonRed"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
